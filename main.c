@@ -11,8 +11,7 @@ void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic t
     int *pointer = arr;
     while (i < size)
     {
-        printf("the item %d is: %d\n", i, *pointer);
-        pointer++;
+        printf("the item %d is: %d\n", i, *(pointer + i));
         i++;
     }
 }
