@@ -20,19 +20,16 @@ void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic t
 
 void AllocateArr(int size){ // this function allocates an array of int with a given size dynamicaly and we assign the values all of that using pointers
     int *ptr = (int *)malloc(sizeof(int)*size);
-    int *pointer = ptr;
-
     // reading values
     for (int i = 0; i < size; i++)
     {
-        /* code */
         printf("enter the %d number: ", i+1);
-        scanf("%d", pointer);
-        pointer ++;
+        scanf("%d", &ptr[i]);     // note: ptr[i] <=> *(ptr + i)
     }
+
+    // printing values
     for (int i = 0; i < size ; i++)
-    {
-        /* code */
+    {        
         printf("the value %d is: %d\n", i + 1, ptr[i]);
     }
     
