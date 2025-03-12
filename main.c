@@ -1,16 +1,24 @@
 #include <stdio.h>
 
-void SwapTwoVar(int *a, int *b){
+void SwapTwoVar(int *a, int *b){ // third variable approach
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
+void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic traverse an array of integer
+    int i = 0;
+    int *pointer = arr;
+    while (i < size)
+    {
+        printf("the item %d is: %d\n", i, *pointer);
+        pointer++;
+        i++;
+    }
+}
+
 int main(){
-    int a = 7;
-    int b = 6;
-    SwapTwoVar(&a, &b);
-    printf("the number a is: %d\n", a);
-    printf("the number b is: %d", b);
+    int arr[5] = {1, 4, 3, 0, 3};
+    PointerTraverseArr(arr, 5);
     return 0;
 }
