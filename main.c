@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 
-void SwapTwoVar(int *a, int *b){ // third variable approach
+void SwapTwoVar(int *a, int *b){ // swap two variables using third variable approach
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic traverse an array of integer
+void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic traverse an array of integers
     int i = 0;
     int *pointer = arr;
     while (i < size)
@@ -26,7 +26,6 @@ void AllocateArr(int size){ // this function allocates an array of int with a gi
         printf("enter the %d number: ", i+1);
         scanf("%d", &ptr[i]);     // note: ptr[i] <=> *(ptr + i)
     }
-
     // printing values
     for (int i = 0; i < size ; i++)
     {        
@@ -35,7 +34,19 @@ void AllocateArr(int size){ // this function allocates an array of int with a gi
     
 }
 
+void CheckPointerNull(int *ptr){ // this function takes an int pointer and return weather it is a null pointer or not
+    
+    if (ptr == NULL)
+    {
+        printf("the pointer is NULL \n");
+    }
+    else{printf("the pointer is not NULL \n");}
+    // NULL pointers are pointer that doesn't point to anything 
+}
+
 int main(){
-    AllocateArr(5);
+    int x = 8;
+    int *pointer = &x;
+    CheckPointerNull(pointer);
     return 0;
 }
