@@ -60,21 +60,21 @@ int CountVowels(char *str){ // count the vowels in a string by giving the pointe
 
 }
 
-char ReverseString(char *str){
-    char *start = str; 
-    char *end = str + strlen(str) - 1; 
+char ReverseString(char *str){ 
+    char *start = str; // pointer to the first char
+    char *end = str + strlen(str) - 1;  // pointer to the last char
     while (start < end) 
     { 
-        char temp = *start; 
+        char current = *start; 
         *start = *end; 
-        *end = temp; 
+        *end = current; 
         start++; 
         end--; 
     } 
 }
     
 int main(){
-    char string[] = "hello";
+    char string[] = "";
     ReverseString(string);
     printf("the string after reverse is : %s", string);
     return 0;
