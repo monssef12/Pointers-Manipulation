@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 void SwapTwoVar(int *a, int *b){ // swap two variables using third variable approach
@@ -58,7 +59,23 @@ int CountVowels(char *str){ // count the vowels in a string by giving the pointe
     return count;
 
 }
+
+char ReverseString(char *str){
+    char *start = str; 
+    char *end = str + strlen(str) - 1; 
+    while (start < end) 
+    { 
+        char temp = *start; 
+        *start = *end; 
+        *end = temp; 
+        start++; 
+        end--; 
+    } 
+}
+    
 int main(){
-    printf("the number of vowels is: %d", CountVowels("Hello"));
+    char *string = "hello";
+    ReverseString(string);
+    printf("the string after reverse is : %s", string);
     return 0;
 }
