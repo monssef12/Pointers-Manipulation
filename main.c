@@ -35,7 +35,6 @@ void AllocateArr(int size){ // this function allocates an array of int with a gi
 }
 
 void CheckPointerNull(int *ptr){ // this function takes an int pointer and return weather it is a null pointer or not
-    
     if (ptr == NULL)
     {
         printf("the pointer is NULL \n");
@@ -44,9 +43,22 @@ void CheckPointerNull(int *ptr){ // this function takes an int pointer and retur
     // NULL pointers are pointer that doesn't point to anything 
 }
 
+
+int CountVowels(char *str){ // count the vowels in a string by giving the pointer to the string
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) // iterate until reach the end of the string 
+    {
+        if ( str[i] == 'o' || str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'u'
+            || str[i] == 'O' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'U')
+        {
+            count++;
+
+        }
+    }
+    return count;
+
+}
 int main(){
-    int x = 8;
-    int *pointer = &x;
-    CheckPointerNull(pointer);
+    printf("the number of vowels is: %d", CountVowels("Hello"));
     return 0;
 }
