@@ -74,7 +74,7 @@ char ReverseString(char *str){
 }
     
 int main(){
-    char *string = "hello";
+    char string[] = "hello";
     ReverseString(string);
     printf("the string after reverse is : %s", string);
     return 0;
