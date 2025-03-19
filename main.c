@@ -83,7 +83,7 @@ float GetAverage(int *arr, int size){ // take a pointer to an int arr and return
 }
 
 int main(){
-    int arr[5] = {1,1,1,1,1};
+    int arr[5] = {1,2,5,6,4};
     printf("the average is : %f", GetAverage(&arr[0], 5));
     return 0;
 }
