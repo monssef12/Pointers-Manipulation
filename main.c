@@ -82,6 +82,14 @@ float GetAverage(int *arr, int size){ // take a pointer to an int arr and return
     return sum/size;
 }
 
+struct Node
+{
+    int value;
+    struct Node *next;
+    /* data */
+};
+
+
 int main(){
     int arr[5] = {1,2,5,6,4};
     printf("the average is : %f", GetAverage(&arr[0], 5));
