@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 char ReverseString(char *str){ 
     char *start = str; // pointer to the first char
@@ -11,8 +14,10 @@ char ReverseString(char *str){
         end--; 
     } 
 }
+
 int main(){
-
-
+    char string[10] = "toilet";
+    ReverseString(&string[0]);
+    printf("the reversed string is: %s", &string);
     return 0;
 }

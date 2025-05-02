@@ -18,6 +18,9 @@ int CountVowels(char *str){ // count the vowels in a string by giving the pointe
 
 int main(){
 
+    char str[] = "Embedded Systems";
 
+    int vowelCount = CountVowels(str);
+    printf("Number of vowels: %d\n", vowelCount);
     return 0;
 }
