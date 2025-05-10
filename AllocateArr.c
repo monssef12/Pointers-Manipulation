@@ -19,5 +19,6 @@ void AllocateArr(int size){ // this function allocates an array of int with a gi
 
 
 int main(){
+    AllocateArr(5);
     return 0;
 }

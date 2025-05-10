@@ -14,7 +14,7 @@ void PointerTraverseArr(int arr[], int size){ // using the pointers arithmetic t
 }
 
 int main(){
-
-
+    int arr[5] = {4,3,4,2,0};
+    PointerTraverseArr(arr, 5);
     return 0;
 }

@@ -5,11 +5,6 @@ void SwapTwoVar(int *a, int *b){ // swap two variables using third variable appr
     *b = temp;
 }
 
-
-
-// print tsructure values using its pointer 
-
-
 int main(){
     int a = 3;
     int b = 4;
