@@ -49,7 +49,6 @@ void freeList(struct Node* head) {
 
 int main() {
     struct Node* head = NULL; // Create an empty list
-
     // Insert some values
     insertEnd(&head, 10);
     insertEnd(&head, 20);
